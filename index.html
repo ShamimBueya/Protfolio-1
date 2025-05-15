@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Protfolio Site</title>
+  <!-- Bootstrap Link -->
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Sass Link -->
+  <link rel="stylesheet" href=".sass/main.scss">
+  <!-- Css Link -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap Icon Link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Area -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm fixed-top pb-4">
+    <div class="container">
+      <!-- Logo Image -->
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.png" alt="Logo" width="120" height="auto" class="img-fluid rounded">
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <button id="modeToggle" class="btn btn-outline-dark ms-auto text-light">
+        <i class="bi bi-moon-fill">
+        </i> 
+        </button>
+    </div>
+  </nav>
+  <!-- About Area -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Image Column -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="./img/undraw_developer-avatar_f6ac.svg" alt="About Image" class="img-fluid rounded">
+        </div>
+  
+        <!-- Text Column -->
+        <div class="col-md-6">
+          <h2 class="mb-3">About Us</h2>
+          <p class="mb-4">
+            We are a team of passionate developers delivering modern web solutions with clean design and scalable code.
+            Our mission is to bring your ideas to life with creativity and precision.
+          </p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- Service Area -->
+  <section class="py-5">
+    <div class="container">
+      <!-- Header -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our Services</h2>
+        <p class="text-muted">We provide a wide range of high-quality services to help you grow your business.</p>
+      </div>
+  
+      <!-- Services Row -->
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-laptop fs-1 text-primary"></i> <!-- Optional Icon -->
+            </div>
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Modern, responsive, and fast websites using the latest web technologies.</p>
+          </div>
+        </div>
+  
+        <!-- Service 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-phone fs-1 text-success"></i>
+            </div>
+            <h5 class="card-title">Mobile Apps</h5>
+            <p class="card-text">Cross-platform mobile applications for Android and iOS platforms.</p>
+          </div>
+        </div>
+  
+        <!-- Service 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-graph-up-arrow fs-1 text-danger"></i>
+            </div>
+            <h5 class="card-title">SEO & Marketing</h5>
+            <p class="card-text">Optimize your online presence and grow your audience with smart SEO strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  <!-- NewsLetter Area -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Image Side -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="./img/undraw_developer-activity_4zqd.svg" alt="Newsletter" class="img-fluid rounded">
+        </div>
+  
+        <!-- Email Input Side -->
+        <div class="col-md-6">
+          <form class="d-flex flex-column flex-sm-row gap-2">
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- Contact Area -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Image Side -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="./img/undraw_personal-text_090t.svg" alt="Contact" class="img-fluid rounded shadow-sm">
+        </div>
+  
+        <!-- Form Side -->
+        <div class="col-md-6">
+          <div class="p-4 bg-white border rounded shadow-sm">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control border rounded" id="name" placeholder="John Doe" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control border rounded" id="email" placeholder="you@example.com" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control border rounded" id="message" rows="5" placeholder="Type your message..."
+                  required></textarea>
+              </div>
+  
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- Footer Area -->
+  <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Brand / About -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">SHAMIM</h5>
+          <p>We create modern and user-friendly web solutions to bring your ideas to life.</p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-md-2 mb-4">
+          <h6 class="text-uppercase">Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-decoration-none">About</a></li>
+            <li><a href="#" class="text-decoration-none">Services</a></li>
+            <li><a href="#" class="text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Services -->
+        <div class="col-md-3 mb-4">
+          <h6 class="text-uppercase">Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Web Design</a></li>
+            <li><a href="#" class="text-decoration-none">Development</a></li>
+            <li><a href="#" class="text-decoration-none">SEO</a></li>
+            <li><a href="#" class="text-decoration-none">Marketing</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-3 mb-4">
+          <h6 class="text-uppercase">Contact</h6>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i> shamimbueya@gmail.com</p>
+          <p class="mb-1"><i class="bi bi-phone me-2"></i> +880 1614943211</p>
+          <p><i class="bi bi-geo-alt me-2"></i> Dhaka, Bangladesh</p>
+        </div>
+  
+      </div>
+  
+      <hr class="border-light" />
+  
+      <div class="text-center small">
+        &copy; 2025 Shamim. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS Link -->
+  <script type="module" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- JS Link -->
+  <script type="" src="script.js"></script>
+</body>
+</html>
