@@ -5,11 +5,44 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: system-ui, sans-serif;
   background-color: #fff;
   color: #212529;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+}
+img {
+  width: 500px;
+}
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+#home,#about,#service,#newsLetter,#contact {
+  padding: 5rem;
+}
+// #2563EB  /* Tailwind: blue-600 */
+// #6B7280  /* Tailwind: gray-500 */
+// #10B981  /* Tailwind: emerald-500 */
+$white:    #fff;
+$primaryColor: #2563EB;
+$commonColor: #6B7280;
+$lightColor:#10B981;
+
+
+$theme-colors: (
+  "primary":    #10B981,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+@media (max-width: 768px) {
+  section {
+    padding: 1.5rem;
+    text-align: center;
+  }
 }

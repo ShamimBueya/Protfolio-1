@@ -1,0 +1,14 @@
+#mainMenu {
+  img {
+    width: 80px;
+    border-radius: 50%;
+    border: none;
+  }
+  .nav-link.active {
+    background-color: #198754; /* Bootstrap green */
+    border-radius: 5px;
+    font-weight: 700;
+    color: #fff !important;
+  }
+
+}

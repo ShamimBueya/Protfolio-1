@@ -7,7 +7,7 @@
   <!-- Bootstrap Link -->
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <!-- Sass Link -->
-  <link rel="stylesheet" href=".sass/main.scss">
+  <link rel="stylesheet" href="./css/main.min.css">
   <!-- Css Link -->
   <link rel="stylesheet" href="style.css">
   <!-- Bootstrap Icon Link -->
@@ -17,13 +17,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="main">
   <!-- Header Area -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm fixed-top pb-4">
+  <nav id="mainMenu" class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm fixed-top">
     <div class="container">
       <!-- Logo Image -->
       <a class="navbar-brand" href="#">
-        <img src="./img/logo.png" alt="Logo" width="120" height="auto" class="img-fluid rounded">
+        <img src="./img/logo.png" alt="Logo" width="120" height="auto"">
       </a>
   
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,16 +34,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
+            <a class="nav-link text-light active" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">About</a>
+            <a class="nav-link text-light" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Services</a>
+            <a class="nav-link text-light" href="#service">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Contact</a>
+            <a class="nav-link text-light" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -53,8 +53,26 @@
         </button>
     </div>
   </nav>
+  <!-- Home Area -->
+  <section id="home" class="py-5 my-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="col-md-6">
+          <h1 class="display-4">Welcome to My Website</h1>
+          <p class="lead">I'm a passionate Front-End Developer skilled in HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, Sass, and React.js. love building clean, responsive, and high-performance websites.</p>
+          <a href="#contact" class="btn btn-success">Contact Me</a>
+        </div>
+  
+        <!-- Image -->
+        <div class="col-md-6 text-center">
+          <img src="./img/undraw_interior-design_j887.svg" alt="Home Image" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+    </section>
   <!-- About Area -->
-  <section class="py-5">
+  <section id="about" class="py-5 my-4">
     <div class="container">
       <div class="row align-items-center">
   
@@ -70,14 +88,14 @@
             We are a team of passionate developers delivering modern web solutions with clean design and scalable code.
             Our mission is to bring your ideas to life with creativity and precision.
           </p>
-          <a href="#" class="btn btn-primary">Learn More</a>
+          <a href="#service" class="btn btn-primary">Learn More</a>
         </div>
   
       </div>
     </div>
   </section>
   <!-- Service Area -->
-  <section class="py-5">
+  <section id="service" class="py-5 my-4">
     <div class="container">
       <!-- Header -->
       <div class="text-center mb-5">
@@ -123,7 +141,7 @@
     </div>
     </section>
   <!-- NewsLetter Area -->
-  <section class="py-5">
+  <section id="newsLetter" class="py-5 my-4">
     <div class="container">
       <div class="row align-items-center">
   
@@ -144,7 +162,7 @@
     </div>
   </section>
   <!-- Contact Area -->
-  <section class="py-5">
+  <section id="contact" class="py-5 my-4">
     <div class="container">
       <div class="row align-items-center">
   
@@ -156,15 +174,15 @@
         <!-- Form Side -->
         <div class="col-md-6">
           <div class="p-4 bg-white border rounded shadow-sm">
-            <form>
+            <!-- <form>
               <div class="mb-3">
                 <label for="name" class="form-label">Your Name</label>
-                <input type="text" class="form-control border rounded" id="name" placeholder="John Doe" required>
+                <input type="text" class="form-control border rounded" id="name" placeholder="Enter Your Name" required>
               </div>
   
               <div class="mb-3">
                 <label for="email" class="form-label">Your Email</label>
-                <input type="email" class="form-control border rounded" id="email" placeholder="you@example.com" required>
+                <input type="email" class="form-control border rounded" id="email" placeholder="Enter Your Email" required>
               </div>
   
               <div class="mb-3">
@@ -173,6 +191,28 @@
                   required></textarea>
               </div>
   
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </form> -->
+            <form action="https://formspree.io/f/mzzroaor"
+            method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control border rounded" id="name" placeholder="Enter Your Name" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input name="Email" type="email" class="form-control border rounded" id="email" placeholder="Enter Your Email" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control border rounded" id="message" name="Message" rows="5" placeholder="Type your message..."
+                  required></textarea>
+              </div>
+              <!-- your other form fields go here -->
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary">Send Message</button>
               </div>
@@ -198,10 +238,10 @@
         <div class="col-md-2 mb-4">
           <h6 class="text-uppercase">Links</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-decoration-none">About</a></li>
-            <li><a href="#" class="text-decoration-none">Services</a></li>
-            <li><a href="#" class="text-decoration-none">Contact</a></li>
+            <li><a href="#home" class="text-decoration-none">Home</a></li>
+            <li><a href="#about" class="text-decoration-none">About</a></li>
+            <li><a href="#service" class="text-decoration-none">Services</a></li>
+            <li><a href="#contact" class="text-decoration-none">Contact</a></li>
           </ul>
         </div>
   
@@ -235,7 +275,7 @@
   </footer>
   
   <!-- Bootstrap JS Link -->
-  <script type="module" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="module" src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <!-- JS Link -->
   <script type="" src="script.js"></script>
 </body>

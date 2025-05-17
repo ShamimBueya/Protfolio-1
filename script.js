@@ -1,3 +1,5 @@
+// ! Dark Light Mode
+
 const modeToggle = document.getElementById('modeToggle');
 let darkMode = false;
 
@@ -16,4 +18,27 @@ modeToggle.addEventListener('click', () => {
     modeToggle.innerHTML = '<i class="bi bi-moon-fill"></i> ';
   }
   darkMode = !darkMode;
+});
+
+// ! Scrool Active
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100; // Offset tweak
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
 });
